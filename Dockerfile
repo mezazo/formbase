@@ -24,12 +24,13 @@ RUN bun run build
 
 # Stage 2: Runner
 FROM oven/bun:1.3.2-slim AS runner
-WORKDIR /app
 ENV NODE_ENV=production
 ENV PORT=3000
 
+WORKDIR /app
 COPY --from=builder /app ./
-
 RUN mkdir -p /app/data
+
+WORKDIR /app/apps/web
 EXPOSE 3000
-CMD ["bun", "--cwd", "apps/web", "run", "start"]
+CMD ["bun", "run", "start"]
