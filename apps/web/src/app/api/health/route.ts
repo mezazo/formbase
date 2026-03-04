@@ -1,5 +1,7 @@
 import { db, drizzlePrimitives } from '@formbase/db';
 
+export const dynamic = 'force-dynamic';
+
 export async function GET() {
   try {
     await db.execute(drizzlePrimitives.sql`SELECT 1000`);
