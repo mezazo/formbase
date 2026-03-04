@@ -3,7 +3,7 @@ FROM oven/bun:1.3.2 AS builder
 WORKDIR /app
 
 COPY . .
-RUN bun install --frozen-lockfile
+RUN bun install
 
 # Build-time environment variables (non-secret ones only)
 ARG NEXT_PUBLIC_APP_URL
