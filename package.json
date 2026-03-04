@@ -9,22 +9,17 @@
     "tests"
   ],
   "scripts": {
-    "app": "bun run dev --filter=web",
-    "build": "turbo build",
-    "clean": "rimraf --glob **/node_modules **/dist **/.turbo **/.next **/.astro **/.eslintcache bun.lock **/.tsbuildinfo **/test-results",
-    "d": "bun install && bun docker:start && bun run dev",
-    "dev": "turbo dev",
-    "docker:start": "docker-compose  -p formbase -f ./docker/docker-compose.yml up -d",
-    "format": "prettier \"**/*\" --ignore-unknown --list-different --write",
-    "format:check": "prettier \"**/*\" --ignore-unknown --list-different",
-    "lint": "eslint . --cache --max-warnings 0",
-    "reset:changelog": "rimraf --glob **/*.mdx",
-    "test": "turbo run test",
-    "test:coverage": "turbo run test:coverage",
-    "test:e2e": "turbo run test:e2e",
-    "tests:ui": "bun run --cwd=tests test:e2e:ui",
-    "typecheck": "tsc --noEmit --tsBuildInfoFile .tsbuildinfo"
-  },
+      "app": "bun run dev --filter=web",
+      "build": "turbo build",
+      "start": "turbo run start --filter=web",
+      "clean": "rimraf --glob **/node_modules **/dist **/.turbo **/.next **/.astro **/.eslintcache bun.lock **/.tsbuildinfo **/test-results",
+      "dev": "turbo dev",
+      "format": "prettier \"**/*\" --ignore-unknown --list-different --write",
+      "format:check": "prettier \"**/*\" --ignore-unknown --list-different",
+      "lint": "eslint . --cache --max-warnings 0",
+      "test": "turbo run test",
+      "typecheck": "tsc --noEmit --tsBuildInfoFile .tsbuildinfo"
+    },
   "devDependencies": {
     "@formbase/tsconfig": "workspace:*",
     "@ianvs/prettier-plugin-sort-imports": "^4.2.1",
