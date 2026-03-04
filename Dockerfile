@@ -19,6 +19,8 @@ ENV DATABASE_URL=$DATABASE_URL
 ENV NODE_ENV=production
 ENV SKIP_ENV_VALIDATION=1
 
+ENV TSUP_SKIP_DTS=1
+
 # This will now find ALLOW_SIGNIN_SIGNUP and stop complaining
 RUN bun run build
 
