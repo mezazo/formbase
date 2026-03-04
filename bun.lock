@@ -165,17 +165,6 @@
       "name": "@formbase/tsconfig",
       "version": "0.1.0",
     },
-    "packages/core": {
-      "name": "@formbase/core",
-      "version": "0.1.0",
-      "devDependencies": {
-        "@formbase/tsconfig": "workspace:*",
-        "@microsoft/api-extractor": "^7.47.8",
-        "@types/node": "^20.12.12",
-        "eslint-config-formbase": "workspace:*",
-        "tsup": "^8.0.2",
-      },
-    },
     "packages/db": {
       "name": "@formbase/db",
       "version": "0.1.0",
@@ -495,8 +484,6 @@
     "@formbase/api": ["@formbase/api@workspace:packages/api"],
 
     "@formbase/auth": ["@formbase/auth@workspace:packages/auth"],
-
-    "@formbase/core": ["@formbase/core@workspace:packages/core"],
 
     "@formbase/db": ["@formbase/db@workspace:packages/db"],
 
